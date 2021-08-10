@@ -6,7 +6,6 @@
 //
 
 #include <iostream>
-#include <cstring>
 using namespace std;
 
 struct Node{
@@ -26,20 +25,17 @@ void inorder_traverse(int here, Node* tree){
 int main(int argc, char** argv)
 {
     int test_case;
-    int T;
-    cin>>T;
-    for(test_case = 1; test_case <= T; ++test_case)
+    for(test_case = 1; test_case <= 10; ++test_case)
     {
         int n;
         cin >> n;
         
         Node tree[101];
         for (int i = 1; i <= n; i++) {
-            Node node = Node();
-            node.left = 0;
-            node.right = 0;
-            
             cin >> i >> tree[i].data;
+            tree[i].left = 0;
+            tree[i].right = 0;
+            
             if (i < n / 2) {
                 cin >> tree[i].left >> tree[i].right;
             } else if (i == n / 2) {
