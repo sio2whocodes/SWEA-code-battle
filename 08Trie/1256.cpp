@@ -37,7 +37,8 @@ struct Trie {
             if(_children[0]){
                 
             }
-            if (_children[*word - 'a' + 1] != nullptr) return _children[*word - 'a' + 1]->get(word + 1);
+            if (_children[*word - 'a' + 1] != nullptr)
+                return _children[*word - 'a' + 1]->get(word + 1);
             return nullptr;
         }
         return this;
